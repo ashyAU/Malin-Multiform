@@ -46,13 +46,18 @@ namespace Malin_Multiform
                     break;
 
                 case "textBoxFilterName":
-                    match = MasterFile.Where(item => item.Value.ToString().StartsWith(textBox.Text)).ToList();
+                    match = MasterFile.Where(item => item.Value.ToString().StartsWith(textBox.Text, StringComparison.CurrentCultureIgnoreCase)).ToList();
                     break;
             }
-            foreach (var item in match)
+
+            if (textBox.Text != "")
             {
-                ListBoxFiltered.Items.Add($"{item.Value}, {item.Key}");
+                foreach (var item in match)
+                {
+                    ListBoxFiltered.Items.Add($"{item.Value}, {item.Key}");
+                }
             }
+
 
         }
         private void textBoxFilterID_TextChanged(object sender, EventArgs e)
@@ -64,9 +69,6 @@ namespace Malin_Multiform
             Filter(textBoxFilterName);
         }
 
-
-
-
         private void GeneralGUI_KeyPress(object sender, KeyEventArgs e)
         {
             if (e.Alt)
@@ -75,14 +77,46 @@ namespace Malin_Multiform
                 {
                     FocusIDTextbox();
                 }
+                if (e.KeyCode == Keys.W)
+                {
+                    FocusNameTextBox();
+                }
             }
         }
+
 
 
         private void FocusIDTextbox()
         {
             textBoxFilterID.Clear();
             textBoxFilterID.Select();
+        }
+        private void FocusNameTextBox()
+        {
+            textBoxFilterName.Clear();
+            textBoxFilterName.Select();
+        }
+        private void DisplayFilterData()
+        {
+
+            string? item = ListBoxFiltered.GetItemText(ListBoxFiltered.SelectedItem);
+
+            if (item != null)
+            {
+                var data = item.Split(',');
+
+                textBoxFilterName.Text = data[0];
+                textBoxFilterID.Text = data[1];
+            }
+        }
+
+
+        private void ListBoxFiltered_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                DisplayFilterData();
+            }
         }
     }
 }

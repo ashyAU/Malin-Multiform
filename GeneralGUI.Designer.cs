@@ -32,16 +32,21 @@
             ListBoxFiltered = new ListBox();
             textBoxFilterID = new TextBox();
             lblFilterID = new Label();
-            groupBox1 = new GroupBox();
+            groupBoxBinds = new GroupBox();
+            label2 = new Label();
+            label1 = new Label();
             lblCSV = new Label();
             lblResults = new Label();
             statusStrip1 = new StatusStrip();
             lblFilterName = new Label();
             textBoxFilterName = new TextBox();
+            label3 = new Label();
+            groupBoxBinds.SuspendLayout();
             SuspendLayout();
             // 
             // ListboxCSV
             // 
+            ListboxCSV.Enabled = false;
             ListboxCSV.FormattingEnabled = true;
             ListboxCSV.Location = new Point(12, 32);
             ListboxCSV.Name = "ListboxCSV";
@@ -54,7 +59,8 @@
             ListBoxFiltered.Location = new Point(237, 172);
             ListBoxFiltered.Name = "ListBoxFiltered";
             ListBoxFiltered.Size = new Size(212, 244);
-            ListBoxFiltered.TabIndex = 1;
+            ListBoxFiltered.TabIndex = 0;
+            ListBoxFiltered.KeyPress += ListBoxFiltered_KeyPress;
             // 
             // textBoxFilterID
             // 
@@ -73,14 +79,35 @@
             lblFilterID.TabIndex = 3;
             lblFilterID.Text = "Filter by ID";
             // 
-            // groupBox1
+            // groupBoxBinds
             // 
-            groupBox1.Location = new Point(468, 32);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(212, 384);
-            groupBox1.TabIndex = 4;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "groupBox1";
+            groupBoxBinds.Controls.Add(label3);
+            groupBoxBinds.Controls.Add(label2);
+            groupBoxBinds.Controls.Add(label1);
+            groupBoxBinds.Location = new Point(468, 32);
+            groupBoxBinds.Name = "groupBoxBinds";
+            groupBoxBinds.Size = new Size(212, 384);
+            groupBoxBinds.TabIndex = 4;
+            groupBoxBinds.TabStop = false;
+            groupBoxBinds.Text = "Keybinds";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(6, 64);
+            label2.Name = "label2";
+            label2.Size = new Size(187, 20);
+            label2.TabIndex = 1;
+            label2.Text = "Alt W - Selects Name Filter";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(6, 32);
+            label1.Name = "label1";
+            label1.Size = new Size(159, 20);
+            label1.TabIndex = 0;
+            label1.Text = "Alt Q - Selects ID Filter";
             // 
             // lblCSV
             // 
@@ -126,6 +153,15 @@
             textBoxFilterName.TabIndex = 8;
             textBoxFilterName.TextChanged += textBoxFilterName_TextChanged;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(6, 96);
+            label3.Name = "label3";
+            label3.Size = new Size(189, 20);
+            label3.TabIndex = 2;
+            label3.Text = "Enter - Display in Text Field";
+            // 
             // GeneralGUI
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -136,7 +172,7 @@
             Controls.Add(statusStrip1);
             Controls.Add(lblResults);
             Controls.Add(lblCSV);
-            Controls.Add(groupBox1);
+            Controls.Add(groupBoxBinds);
             Controls.Add(lblFilterID);
             Controls.Add(textBoxFilterID);
             Controls.Add(ListBoxFiltered);
@@ -146,6 +182,8 @@
             Name = "GeneralGUI";
             Text = "Form1";
             KeyDown += GeneralGUI_KeyPress;
+            groupBoxBinds.ResumeLayout(false);
+            groupBoxBinds.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -156,11 +194,14 @@
         private ListBox ListBoxFiltered;
         private TextBox textBoxFilterID;
         private Label lblFilterID;
-        private GroupBox groupBox1;
+        private GroupBox groupBoxBinds;
         private Label lblCSV;
         private Label lblResults;
         private StatusStrip statusStrip1;
         private Label lblFilterName;
         private TextBox textBoxFilterName;
+        private Label label2;
+        private Label label1;
+        private Label label3;
     }
 }
