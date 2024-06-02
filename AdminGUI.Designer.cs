@@ -86,9 +86,11 @@
             Controls.Add(groupBox1);
             Controls.Add(textBoxAdminName);
             Controls.Add(textBoxAdminID);
-            Name = "AdminGUI";
-            Text = "Admin Panel";
+            FormBorderStyle = FormBorderStyle.None;
             KeyPreview = true;
+            Name = "AdminGUI";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Admin Panel";
             KeyDown += AdminGUI_KeyPress;
             ResumeLayout(false);
             PerformLayout();
