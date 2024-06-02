@@ -43,15 +43,19 @@ namespace Malin_Multiform
 
         private void AddEntry()
         {
-            if (GeneralGUI.MasterFile.TryGetValue(int.Parse(textBoxAdminID.Text), out string? _))
+
+            // todo tomorrow
+            if (!GeneralGUI.MasterFile.TryGetValue(int.Parse(textBoxAdminID.Text), out string? _))
+            {
+                GeneralGUI.MasterFile.Add(int.Parse(textBoxAdminID.Text), textBoxAdminName.Text);
+                adminStripLabel.Text = $"{textBoxAdminID.Text}, {textBoxAdminName.Text} has been added.";
+                SaveDictionary();
+            }
+            else
             {
                 adminStripLabel.Text = $"Failed to add, {textBoxAdminID.Text} an entry already exists!";
                 return;
             }
-
-            GeneralGUI.MasterFile.Add(int.Parse(textBoxAdminID.Text), textBoxAdminName.Text);
-            adminStripLabel.Text = $"{textBoxAdminID.Text}, {textBoxAdminName.Text} has been added.";
-            SaveDictionary();
         }
 
         private void UpdateEntry()
