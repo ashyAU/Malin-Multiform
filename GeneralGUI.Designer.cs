@@ -141,8 +141,11 @@
             Controls.Add(textBoxFilterID);
             Controls.Add(ListBoxFiltered);
             Controls.Add(ListboxCSV);
+            ImeMode = ImeMode.Off;
+            KeyPreview = true;
             Name = "GeneralGUI";
             Text = "Form1";
+            KeyDown += GeneralGUI_KeyPress;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -1,4 +1,4 @@
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
 namespace Malin_Multiform
 {
@@ -8,11 +8,10 @@ namespace Malin_Multiform
         {
             InitializeComponent();
             ListboxAddAll();
-
         }
         public static Dictionary<int, string> MasterFile = [];
 
-        private void ReadCSV()
+        private static void ReadCSV()
         {
             using var reader = new StreamReader(@"MalinStaffNamesV3.csv");
             while (!reader.EndOfStream)
@@ -66,5 +65,24 @@ namespace Malin_Multiform
         }
 
 
+
+
+        private void GeneralGUI_KeyPress(object sender, KeyEventArgs e)
+        {
+            if (e.Alt)
+            {
+                if (e.KeyCode == Keys.Q)
+                {
+                    FocusIDTextbox();
+                }
+            }
+        }
+
+
+        private void FocusIDTextbox()
+        {
+            textBoxFilterID.Clear();
+            textBoxFilterID.Select();
+        }
     }
 }
