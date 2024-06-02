@@ -33,6 +33,7 @@
             textBoxFilterID = new TextBox();
             lblFilterID = new Label();
             groupBoxBinds = new GroupBox();
+            label3 = new Label();
             label2 = new Label();
             label1 = new Label();
             lblCSV = new Label();
@@ -40,18 +41,17 @@
             statusStrip1 = new StatusStrip();
             lblFilterName = new Label();
             textBoxFilterName = new TextBox();
-            label3 = new Label();
             groupBoxBinds.SuspendLayout();
             SuspendLayout();
             // 
             // ListboxCSV
             // 
-            ListboxCSV.Enabled = false;
             ListboxCSV.FormattingEnabled = true;
             ListboxCSV.Location = new Point(12, 32);
             ListboxCSV.Name = "ListboxCSV";
             ListboxCSV.Size = new Size(212, 384);
             ListboxCSV.TabIndex = 0;
+            ListboxCSV.TabStop = false;
             // 
             // ListBoxFiltered
             // 
@@ -90,6 +90,15 @@
             groupBoxBinds.TabIndex = 4;
             groupBoxBinds.TabStop = false;
             groupBoxBinds.Text = "Keybinds";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(6, 94);
+            label3.Name = "label3";
+            label3.Size = new Size(189, 20);
+            label3.TabIndex = 2;
+            label3.Text = "Enter - Display in Text Field";
             // 
             // label2
             // 
@@ -153,15 +162,6 @@
             textBoxFilterName.TabIndex = 8;
             textBoxFilterName.TextChanged += textBoxFilterName_TextChanged;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(6, 96);
-            label3.Name = "label3";
-            label3.Size = new Size(189, 20);
-            label3.TabIndex = 2;
-            label3.Text = "Enter - Display in Text Field";
-            // 
             // GeneralGUI
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -180,7 +180,7 @@
             ImeMode = ImeMode.Off;
             KeyPreview = true;
             Name = "GeneralGUI";
-            Text = "Form1";
+            Text = "General Panel";
             KeyDown += GeneralGUI_KeyPress;
             groupBoxBinds.ResumeLayout(false);
             groupBoxBinds.PerformLayout();

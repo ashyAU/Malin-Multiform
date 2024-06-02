@@ -49,7 +49,6 @@ namespace Malin_Multiform
                     match = MasterFile.Where(item => item.Value.ToString().StartsWith(textBox.Text, StringComparison.CurrentCultureIgnoreCase)).ToList();
                     break;
             }
-
             if (textBox.Text != "")
             {
                 foreach (var item in match)
@@ -81,10 +80,18 @@ namespace Malin_Multiform
                 {
                     FocusNameTextBox();
                 }
+                if (e.KeyCode == Keys.A)
+                {
+                    OpenAdminPanel();
+                }
             }
         }
 
-
+        private static void OpenAdminPanel()
+        {
+            AdminGUI adminGUI = new();
+            adminGUI.ShowDialog();
+        }
 
         private void FocusIDTextbox()
         {
