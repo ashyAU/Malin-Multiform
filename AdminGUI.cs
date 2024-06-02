@@ -12,10 +12,88 @@ namespace Malin_Multiform
 {
     public partial class AdminGUI : Form
     {
-        public AdminGUI()
+        public AdminGUI(string key, string value)
         {
             InitializeComponent();
+            AdminTextFields(key, value);
+        }
 
+        private void AdminTextFields(string key, string value)
+        {
+            if (key == "77" && string.IsNullOrEmpty(value))
+            {
+
+                Random random = new();
+
+                int newID = random.Next(100000, 999999);
+                while (GeneralGUI.MasterFile.ContainsKey(newID))
+                {
+                    newID--;
+                }
+                textBoxAdminID.Text = $"{key}{newID}";
+                textBoxAdminName.Text = "";
+            }
+            else
+            {
+                textBoxAdminID.Text = key;
+                textBoxAdminName.Text = value;
+            }
+            SaveDictionary();
+        }
+
+        private void AddEntry()
+        {
+            if (GeneralGUI.MasterFile.TryGetValue(int.Parse(textBoxAdminID.Text), out string? _))
+            {
+                adminStripLabel.Text = $"Failed to add, {textBoxAdminID.Text} an entry already exists!";
+                return;
+            }
+
+            GeneralGUI.MasterFile.Add(int.Parse(textBoxAdminID.Text), textBoxAdminName.Text);
+            adminStripLabel.Text = $"{textBoxAdminID.Text}, {textBoxAdminName.Text} has been added.";
+            SaveDictionary();
+        }
+
+        private void UpdateEntry()
+        {
+            if (GeneralGUI.MasterFile.TryGetValue(int.Parse(textBoxAdminID.Text), out string? _))
+            {
+                GeneralGUI.MasterFile[int.Parse(textBoxAdminID.Text)] = textBoxAdminName.Text;
+                SaveDictionary();
+                adminStripLabel.Text = $"{textBoxAdminID.Text} has been updated!";
+                return;
+            }
+            adminStripLabel.Text = "This ID does not Exist! Failed to update";
+
+
+        }
+        private void DeleteEntry()
+        {
+            GeneralGUI.MasterFile.Remove(int.Parse(textBoxAdminID.Text));
+            SaveDictionary();
+
+            adminStripLabel.Text = $"{textBoxAdminID.Text} has been removed.";
+            ClearTextFields();
+
+
+        }
+
+        private void ClearTextFields()
+        {
+            textBoxAdminID.Clear();
+            textBoxAdminName.Clear();
+        }
+
+
+        private static void SaveDictionary()
+        {
+            using StreamWriter streamWriter = new(@"MalinStaffNamesV3.csv");
+            {
+                foreach (var line in GeneralGUI.MasterFile)
+                {
+                    streamWriter.WriteLine($"{line.Key},{line.Value}");
+                }
+            }
         }
 
         private void AdminGUI_KeyPress(object sender, KeyEventArgs e)
@@ -26,14 +104,20 @@ namespace Malin_Multiform
                 {
                     this.Close();
                 }
+                if (e.KeyCode == Keys.Q)
+                {
+                    UpdateEntry();
+                }
                 if (e.KeyCode == Keys.W)
                 {
-                    MessageBox.Show("Test");
+                    AddEntry();
                 }
-                if (e.KeyCode == Keys.A)
+                if (e.KeyCode == Keys.E)
                 {
+                    DeleteEntry();
                 }
             }
+
         }
     }
 }

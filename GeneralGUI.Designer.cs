@@ -33,6 +33,8 @@
             textBoxFilterID = new TextBox();
             lblFilterID = new Label();
             groupBoxBinds = new GroupBox();
+            lblOpenPanel = new Label();
+            label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
@@ -59,7 +61,7 @@
             ListBoxFiltered.Location = new Point(237, 172);
             ListBoxFiltered.Name = "ListBoxFiltered";
             ListBoxFiltered.Size = new Size(212, 244);
-            ListBoxFiltered.TabIndex = 0;
+            ListBoxFiltered.TabIndex = 2;
             ListBoxFiltered.KeyPress += ListBoxFiltered_KeyPress;
             // 
             // textBoxFilterID
@@ -67,8 +69,8 @@
             textBoxFilterID.Location = new Point(237, 35);
             textBoxFilterID.Name = "textBoxFilterID";
             textBoxFilterID.Size = new Size(212, 27);
-            textBoxFilterID.TabIndex = 2;
-            textBoxFilterID.TextChanged += textBoxFilterID_TextChanged;
+            textBoxFilterID.TabIndex = 0;
+            textBoxFilterID.TextChanged += TextBoxFilterID_TextChanged;
             // 
             // lblFilterID
             // 
@@ -81,15 +83,35 @@
             // 
             // groupBoxBinds
             // 
+            groupBoxBinds.Controls.Add(lblOpenPanel);
+            groupBoxBinds.Controls.Add(label4);
             groupBoxBinds.Controls.Add(label3);
             groupBoxBinds.Controls.Add(label2);
             groupBoxBinds.Controls.Add(label1);
             groupBoxBinds.Location = new Point(468, 32);
             groupBoxBinds.Name = "groupBoxBinds";
-            groupBoxBinds.Size = new Size(212, 384);
+            groupBoxBinds.Size = new Size(244, 191);
             groupBoxBinds.TabIndex = 4;
             groupBoxBinds.TabStop = false;
             groupBoxBinds.Text = "Keybinds";
+            // 
+            // lblOpenPanel
+            // 
+            lblOpenPanel.AutoSize = true;
+            lblOpenPanel.Location = new Point(6, 126);
+            lblOpenPanel.Name = "lblOpenPanel";
+            lblOpenPanel.Size = new Size(185, 20);
+            lblOpenPanel.TabIndex = 4;
+            lblOpenPanel.Text = "Alt A - Opens Admin Panel";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(6, 156);
+            label4.Name = "label4";
+            label4.Size = new Size(226, 20);
+            label4.TabIndex = 3;
+            label4.Text = "ID Field = 77 - Creates New Staff";
             // 
             // label3
             // 
@@ -159,8 +181,8 @@
             textBoxFilterName.Location = new Point(237, 96);
             textBoxFilterName.Name = "textBoxFilterName";
             textBoxFilterName.Size = new Size(212, 27);
-            textBoxFilterName.TabIndex = 8;
-            textBoxFilterName.TextChanged += textBoxFilterName_TextChanged;
+            textBoxFilterName.TabIndex = 1;
+            textBoxFilterName.TextChanged += TextBoxFilterName_TextChanged;
             // 
             // GeneralGUI
             // 
@@ -203,5 +225,7 @@
         private Label label2;
         private Label label1;
         private Label label3;
+        private Label label4;
+        private Label lblOpenPanel;
     }
 }

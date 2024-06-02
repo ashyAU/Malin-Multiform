@@ -4,11 +4,13 @@ namespace Malin_Multiform
 {
     public partial class GeneralGUI : Form
     {
+
         public GeneralGUI()
         {
             InitializeComponent();
             ListboxAddAll();
         }
+
         public static Dictionary<int, string> MasterFile = [];
 
         private static void ReadCSV()
@@ -59,11 +61,11 @@ namespace Malin_Multiform
 
 
         }
-        private void textBoxFilterID_TextChanged(object sender, EventArgs e)
+        private void TextBoxFilterID_TextChanged(object sender, EventArgs e)
         {
             Filter(textBoxFilterID);
         }
-        private void textBoxFilterName_TextChanged(object sender, EventArgs e)
+        private void TextBoxFilterName_TextChanged(object sender, EventArgs e)
         {
             Filter(textBoxFilterName);
         }
@@ -87,10 +89,25 @@ namespace Malin_Multiform
             }
         }
 
-        private static void OpenAdminPanel()
+        private void OpenAdminPanel()
         {
-            AdminGUI adminGUI = new();
-            adminGUI.ShowDialog();
+            try
+            {
+                if (MasterFile.ContainsKey(int.Parse(textBoxFilterID.Text))
+                    && MasterFile[int.Parse(textBoxFilterID.Text)] == textBoxFilterName.Text
+                    || textBoxFilterID.Text == "77" && string.IsNullOrEmpty(textBoxFilterName.Text))
+                {
+                    AdminGUI adminGUI = new(textBoxFilterID.Text, textBoxFilterName.Text);
+                    adminGUI.ShowDialog();
+
+                    textBoxFilterID.Clear();
+                    textBoxFilterName.Clear();
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Please ensure that ");
+            }
         }
 
         private void FocusIDTextbox()
@@ -105,18 +122,17 @@ namespace Malin_Multiform
         }
         private void DisplayFilterData()
         {
-
             string? item = ListBoxFiltered.GetItemText(ListBoxFiltered.SelectedItem);
 
-            if (item != null)
+            if (!string.IsNullOrEmpty(item) && ListBoxFiltered.SelectedIndex >= 0)
             {
                 var data = item.Split(',');
 
                 textBoxFilterName.Text = data[0];
                 textBoxFilterID.Text = data[1];
+
             }
         }
-
 
         private void ListBoxFiltered_KeyPress(object sender, KeyPressEventArgs e)
         {
