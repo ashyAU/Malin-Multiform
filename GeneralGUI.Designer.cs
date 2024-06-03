@@ -43,6 +43,7 @@
             statusStrip1 = new StatusStrip();
             lblFilterName = new Label();
             textBoxFilterName = new TextBox();
+            lblCloseGeneral = new Label();
             groupBoxBinds.SuspendLayout();
             SuspendLayout();
             // 
@@ -83,6 +84,7 @@
             // 
             // groupBoxBinds
             // 
+            groupBoxBinds.Controls.Add(lblCloseGeneral);
             groupBoxBinds.Controls.Add(lblOpenPanel);
             groupBoxBinds.Controls.Add(label4);
             groupBoxBinds.Controls.Add(label3);
@@ -90,7 +92,7 @@
             groupBoxBinds.Controls.Add(label1);
             groupBoxBinds.Location = new Point(468, 32);
             groupBoxBinds.Name = "groupBoxBinds";
-            groupBoxBinds.Size = new Size(244, 191);
+            groupBoxBinds.Size = new Size(244, 219);
             groupBoxBinds.TabIndex = 4;
             groupBoxBinds.TabStop = false;
             groupBoxBinds.Text = "Keybinds";
@@ -184,6 +186,15 @@
             textBoxFilterName.TabIndex = 1;
             textBoxFilterName.TextChanged += TextBoxFilterName_TextChanged;
             // 
+            // lblCloseGeneral
+            // 
+            lblCloseGeneral.AutoSize = true;
+            lblCloseGeneral.Location = new Point(8, 187);
+            lblCloseGeneral.Name = "lblCloseGeneral";
+            lblCloseGeneral.Size = new Size(170, 20);
+            lblCloseGeneral.TabIndex = 5;
+            lblCloseGeneral.Text = "Alt L - Close Application";
+            // 
             // GeneralGUI
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -199,7 +210,8 @@
             Controls.Add(textBoxFilterID);
             Controls.Add(ListBoxFiltered);
             Controls.Add(ListboxCSV);
-            ImeMode = ImeMode.Off;
+            FormBorderStyle = FormBorderStyle.None;
+            ImeMode = ImeMode.On;
             KeyPreview = true;
             Name = "GeneralGUI";
             Text = "General Panel";
@@ -227,5 +239,6 @@
         private Label label3;
         private Label label4;
         private Label lblOpenPanel;
+        private Label lblCloseGeneral;
     }
 }

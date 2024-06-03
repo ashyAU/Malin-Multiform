@@ -1,6 +1,4 @@
-﻿using System.Text.RegularExpressions;
-
-namespace Malin_Multiform
+﻿namespace Malin_Multiform
 {
     public partial class GeneralGUI : Form
     {
@@ -9,6 +7,7 @@ namespace Malin_Multiform
         {
             InitializeComponent();
             ListboxAddAll();
+            Cursor.Hide();
         }
 
         public static Dictionary<int, string> MasterFile = [];
@@ -36,7 +35,6 @@ namespace Malin_Multiform
             }
         }
 
-
         private void Filter(TextBox textBox)
         {
             var match = new List<KeyValuePair<int, string>>();
@@ -58,8 +56,6 @@ namespace Malin_Multiform
                     ListBoxFiltered.Items.Add($"{item.Value}, {item.Key}");
                 }
             }
-
-
         }
         private void TextBoxFilterID_TextChanged(object sender, EventArgs e)
         {
@@ -74,6 +70,10 @@ namespace Malin_Multiform
         {
             if (e.Alt)
             {
+                if (e.KeyCode == Keys.L)
+                {
+                    this.Close();
+                }
                 if (e.KeyCode == Keys.Q)
                 {
                     FocusIDTextbox();
@@ -130,10 +130,8 @@ namespace Malin_Multiform
 
                 textBoxFilterName.Text = data[0];
                 textBoxFilterID.Text = data[1];
-
             }
         }
-
         private void ListBoxFiltered_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)

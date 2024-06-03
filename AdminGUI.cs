@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Malin_Multiform
+﻿namespace Malin_Multiform
 {
     public partial class AdminGUI : Form
     {
@@ -42,8 +32,6 @@ namespace Malin_Multiform
 
         private void AddEntry()
         {
-
-            // todo tomorrow
             if (!GeneralGUI.MasterFile.TryGetValue(int.Parse(textBoxAdminID.Text), out string? _))
             {
                 GeneralGUI.MasterFile.Add(int.Parse(textBoxAdminID.Text), textBoxAdminName.Text);
@@ -68,9 +56,8 @@ namespace Malin_Multiform
                 return;
             }
             adminStripLabel.Text = "This ID does not Exist! Failed to update";
-
-
         }
+
         private void DeleteEntry()
         {
             GeneralGUI.MasterFile.Remove(int.Parse(textBoxAdminID.Text));
@@ -78,8 +65,6 @@ namespace Malin_Multiform
 
             adminStripLabel.Text = $"{textBoxAdminID.Text} has been removed.";
             ClearTextFields();
-
-
         }
 
         private void ClearTextFields()
