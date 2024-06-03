@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ash\\Documents\\Advanced Data Structures\\Assessment 3\\Malin-Multiform-Unsorted\\Malin-Multiform\\Malin-Multiform.csproj": {}
+    "C:\\Users\\ash\\Documents\\Advanced Data Structures\\Assessment 3\\Finished Solutions\\Malin-Multiform-Unsorted\\Malin-Multiform\\Malin-Multiform.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ash\\Documents\\Advanced Data Structures\\Assessment 3\\Malin-Multiform-Unsorted\\Malin-Multiform\\Malin-Multiform.csproj": {
+    "C:\\Users\\ash\\Documents\\Advanced Data Structures\\Assessment 3\\Finished Solutions\\Malin-Multiform-Unsorted\\Malin-Multiform\\Malin-Multiform.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ash\\Documents\\Advanced Data Structures\\Assessment 3\\Malin-Multiform-Unsorted\\Malin-Multiform\\Malin-Multiform.csproj",
+        "projectUniqueName": "C:\\Users\\ash\\Documents\\Advanced Data Structures\\Assessment 3\\Finished Solutions\\Malin-Multiform-Unsorted\\Malin-Multiform\\Malin-Multiform.csproj",
         "projectName": "Malin-Multiform",
-        "projectPath": "C:\\Users\\ash\\Documents\\Advanced Data Structures\\Assessment 3\\Malin-Multiform-Unsorted\\Malin-Multiform\\Malin-Multiform.csproj",
+        "projectPath": "C:\\Users\\ash\\Documents\\Advanced Data Structures\\Assessment 3\\Finished Solutions\\Malin-Multiform-Unsorted\\Malin-Multiform\\Malin-Multiform.csproj",
         "packagesPath": "C:\\Users\\ash\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ash\\Documents\\Advanced Data Structures\\Assessment 3\\Malin-Multiform-Unsorted\\Malin-Multiform\\obj\\",
+        "outputPath": "C:\\Users\\ash\\Documents\\Advanced Data Structures\\Assessment 3\\Finished Solutions\\Malin-Multiform-Unsorted\\Malin-Multiform\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
