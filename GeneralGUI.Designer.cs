@@ -33,6 +33,7 @@
             textBoxFilterID = new TextBox();
             lblFilterID = new Label();
             groupBoxBinds = new GroupBox();
+            lblCloseGeneral = new Label();
             lblOpenPanel = new Label();
             label4 = new Label();
             label3 = new Label();
@@ -43,7 +44,6 @@
             statusStrip1 = new StatusStrip();
             lblFilterName = new Label();
             textBoxFilterName = new TextBox();
-            lblCloseGeneral = new Label();
             groupBoxBinds.SuspendLayout();
             SuspendLayout();
             // 
@@ -96,6 +96,15 @@
             groupBoxBinds.TabIndex = 4;
             groupBoxBinds.TabStop = false;
             groupBoxBinds.Text = "Keybinds";
+            // 
+            // lblCloseGeneral
+            // 
+            lblCloseGeneral.AutoSize = true;
+            lblCloseGeneral.Location = new Point(8, 187);
+            lblCloseGeneral.Name = "lblCloseGeneral";
+            lblCloseGeneral.Size = new Size(170, 20);
+            lblCloseGeneral.TabIndex = 5;
+            lblCloseGeneral.Text = "Alt L - Close Application";
             // 
             // lblOpenPanel
             // 
@@ -163,9 +172,9 @@
             // statusStrip1
             // 
             statusStrip1.ImageScalingSize = new Size(20, 20);
-            statusStrip1.Location = new Point(0, 446);
+            statusStrip1.Location = new Point(0, 444);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(724, 22);
+            statusStrip1.Size = new Size(724, 24);
             statusStrip1.TabIndex = 7;
             statusStrip1.Text = "statusStrip1";
             // 
@@ -185,15 +194,6 @@
             textBoxFilterName.Size = new Size(212, 27);
             textBoxFilterName.TabIndex = 1;
             textBoxFilterName.TextChanged += TextBoxFilterName_TextChanged;
-            // 
-            // lblCloseGeneral
-            // 
-            lblCloseGeneral.AutoSize = true;
-            lblCloseGeneral.Location = new Point(8, 187);
-            lblCloseGeneral.Name = "lblCloseGeneral";
-            lblCloseGeneral.Size = new Size(170, 20);
-            lblCloseGeneral.TabIndex = 5;
-            lblCloseGeneral.Text = "Alt L - Close Application";
             // 
             // GeneralGUI
             // 

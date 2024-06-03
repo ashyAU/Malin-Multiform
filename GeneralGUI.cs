@@ -1,4 +1,9 @@
-﻿namespace Malin_Multiform
+﻿using Microsoft.VisualBasic.FileIO;
+using System.Net.Http.Headers;
+using System.Globalization;
+using System.Diagnostics;
+
+namespace Malin_Multiform
 {
     public partial class GeneralGUI : Form
     {
@@ -19,7 +24,23 @@
          * 4.2.	Create a method that will read the data from the .csv file into the 
          * Dictionary data structure when the GUI loads.
          */
-        private static void ReadCSV()
+
+        /*        private async void ReadCSV()
+        {
+            using StreamReader reader = new(@"MalinStaffNamesV3.csv");
+
+            while (!reader.EndOfStream)
+            {
+                string? line = await reader.ReadLineAsync();
+                if (line != null)
+                {
+                    var values = line.Split(',');
+                    MasterFile.Add(int.Parse(values[0]), values[1]);
+                }
+            }
+        }*/
+
+        private void ReadCSV()
         {
             using var reader = new StreamReader(@"MalinStaffNamesV3.csv");
             while (!reader.EndOfStream)
@@ -32,6 +53,7 @@
                 }
             }
         }
+
         /*
          * 4.3.	Create a method to display the Dictionary data into a non-selectable
          * display only list box (ie read only).
