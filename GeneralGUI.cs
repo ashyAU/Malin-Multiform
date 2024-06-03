@@ -9,9 +9,16 @@
             ListboxAddAll();
             Cursor.Hide();
         }
-
+        /*
+         * 4.1.	Create a Dictionary data structure with a TKey of type integer and 
+         * a TValue of type string, name the new data structure “MasterFile”.
+         */
         public static Dictionary<int, string> MasterFile = [];
 
+        /*
+         * 4.2.	Create a method that will read the data from the .csv file into the 
+         * Dictionary data structure when the GUI loads.
+         */
         private static void ReadCSV()
         {
             using var reader = new StreamReader(@"MalinStaffNamesV3.csv");
@@ -25,7 +32,10 @@
                 }
             }
         }
-
+        /*
+         * 4.3.	Create a method to display the Dictionary data into a non-selectable
+         * display only list box (ie read only).
+         */
         private void ListboxAddAll()
         {
             ReadCSV();
@@ -34,7 +44,12 @@
                 ListboxCSV.Items.Add($"{item.Value}, {item.Key}");
             }
         }
-
+        /*
+         * 4.4 && 4.5. Create a method to filter the Staff Name data from the 
+         * Dictionary into a second filtered and selectable list box. This method 
+         * must use a text box input and update as each character is entered. The
+         *  list box must reflect the filtered data in real time.
+         */
         private void Filter(TextBox textBox)
         {
             var match = new List<KeyValuePair<int, string>>();
@@ -88,7 +103,12 @@
                 }
             }
         }
-
+        /*
+         * 4.9.	Create a method that will open the Admin GUI when the Alt + A keys 
+         * are pressed. Ensure the General GUI sends the currently selected Staff 
+         * ID and Staff Name to the Admin GUI for Update and Delete purposes and is 
+         * opened as modal. 
+         */
         private void OpenAdminPanel()
         {
             try
@@ -109,17 +129,31 @@
                 MessageBox.Show($"Please ensure that you have selected an entry.");
             }
         }
-
+        /*
+         * 4.7.	Create a method for the Staff ID text box which will clear the 
+         * contents and place the focus into the text box. Utilise a keyboard 
+         * shortcut.
+         */
         private void FocusIDTextbox()
         {
             textBoxFilterID.Clear();
             textBoxFilterID.Select();
         }
+        /*
+         * 4.6.	Create a method for the Staff Name text box which will clear the 
+         * contents and place the focus into the Staff Name text box. Utilise a 
+         * keyboard shortcut.
+         */
         private void FocusNameTextBox()
         {
             textBoxFilterName.Clear();
             textBoxFilterName.Select();
         }
+        /*
+         * 4.8.	Create a method for the filtered and selectable list box which will 
+         * populate the two text boxes when a staff record is selected. Utilise 
+         * the Tab and keyboard keys.
+         */
         private void DisplayFilterData()
         {
             string? item = ListBoxFiltered.GetItemText(ListBoxFiltered.SelectedItem);
