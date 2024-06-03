@@ -22,7 +22,6 @@ namespace Malin_Multiform
         {
             if (key == "77" && string.IsNullOrEmpty(value))
             {
-
                 Random random = new();
 
                 int newID = random.Next(100000, 999999);
@@ -48,12 +47,13 @@ namespace Malin_Multiform
             if (!GeneralGUI.MasterFile.TryGetValue(int.Parse(textBoxAdminID.Text), out string? _))
             {
                 GeneralGUI.MasterFile.Add(int.Parse(textBoxAdminID.Text), textBoxAdminName.Text);
-                adminStripLabel.Text = $"{textBoxAdminID.Text}, {textBoxAdminName.Text} has been added.";
+                string success = $"{textBoxAdminID.Text} has been added.";
+                adminStripLabel.Text = success;
                 SaveDictionary();
             }
             else
             {
-                adminStripLabel.Text = $"Failed to add, {textBoxAdminID.Text} an entry already exists!";
+                adminStripLabel.Text = $"{textBoxAdminID.Text} already exists!";
                 return;
             }
         }
@@ -121,7 +121,6 @@ namespace Malin_Multiform
                     DeleteEntry();
                 }
             }
-
         }
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Malin-Multiform")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b85668f47d28b7dc8b6e58c6d15882f351272904")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd661add9ee69eaa9899fa104119757fa816d216")]
 [assembly: System.Reflection.AssemblyProductAttribute("Malin-Multiform")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Malin-Multiform")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

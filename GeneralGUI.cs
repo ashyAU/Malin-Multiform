@@ -104,9 +104,9 @@ namespace Malin_Multiform
                     textBoxFilterName.Clear();
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                MessageBox.Show($"Please ensure that ");
+                MessageBox.Show($"Please ensure that you have selected an entry.");
             }
         }
 
