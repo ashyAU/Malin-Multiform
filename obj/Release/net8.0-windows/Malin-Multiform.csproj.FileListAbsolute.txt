@@ -33,3 +33,21 @@ C:\Users\ash\Documents\Advanced Data Structures\Assessment 3\Malin-Multiform-Uns
 C:\Users\ash\Documents\Advanced Data Structures\Assessment 3\Malin-Multiform-Unsorted\Malin-Multiform\obj\Release\net8.0-windows\Malin-Multiform.pdb
 C:\Users\ash\Documents\Advanced Data Structures\Assessment 3\Malin-Multiform-Unsorted\Malin-Multiform\obj\Release\net8.0-windows\Malin-Multiform.genruntimeconfig.cache
 C:\Users\ash\Documents\Advanced Data Structures\Assessment 3\Malin-Multiform-Unsorted\Malin-Multiform\obj\Release\net8.0-windows\ref\Malin-Multiform.dll
+C:\Users\ash\Documents\Advanced Data Structures\Assessment 3\Finished Solutions\Malin-Multiform-Unsorted\Malin-Multiform\bin\Release\net8.0-windows\Malin-Multiform.exe
+C:\Users\ash\Documents\Advanced Data Structures\Assessment 3\Finished Solutions\Malin-Multiform-Unsorted\Malin-Multiform\bin\Release\net8.0-windows\Malin-Multiform.deps.json
+C:\Users\ash\Documents\Advanced Data Structures\Assessment 3\Finished Solutions\Malin-Multiform-Unsorted\Malin-Multiform\bin\Release\net8.0-windows\Malin-Multiform.runtimeconfig.json
+C:\Users\ash\Documents\Advanced Data Structures\Assessment 3\Finished Solutions\Malin-Multiform-Unsorted\Malin-Multiform\bin\Release\net8.0-windows\Malin-Multiform.dll
+C:\Users\ash\Documents\Advanced Data Structures\Assessment 3\Finished Solutions\Malin-Multiform-Unsorted\Malin-Multiform\bin\Release\net8.0-windows\Malin-Multiform.pdb
+C:\Users\ash\Documents\Advanced Data Structures\Assessment 3\Finished Solutions\Malin-Multiform-Unsorted\Malin-Multiform\obj\Release\net8.0-windows\Malin_Multiform.AdminGUI.resources
+C:\Users\ash\Documents\Advanced Data Structures\Assessment 3\Finished Solutions\Malin-Multiform-Unsorted\Malin-Multiform\obj\Release\net8.0-windows\Malin_Multiform.GeneralGUI.resources
+C:\Users\ash\Documents\Advanced Data Structures\Assessment 3\Finished Solutions\Malin-Multiform-Unsorted\Malin-Multiform\obj\Release\net8.0-windows\Malin-Multiform.csproj.GenerateResource.cache
+C:\Users\ash\Documents\Advanced Data Structures\Assessment 3\Finished Solutions\Malin-Multiform-Unsorted\Malin-Multiform\obj\Release\net8.0-windows\Malin-Multiform.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ash\Documents\Advanced Data Structures\Assessment 3\Finished Solutions\Malin-Multiform-Unsorted\Malin-Multiform\obj\Release\net8.0-windows\Malin-Multiform.AssemblyInfoInputs.cache
+C:\Users\ash\Documents\Advanced Data Structures\Assessment 3\Finished Solutions\Malin-Multiform-Unsorted\Malin-Multiform\obj\Release\net8.0-windows\Malin-Multiform.AssemblyInfo.cs
+C:\Users\ash\Documents\Advanced Data Structures\Assessment 3\Finished Solutions\Malin-Multiform-Unsorted\Malin-Multiform\obj\Release\net8.0-windows\Malin-Multiform.csproj.CoreCompileInputs.cache
+C:\Users\ash\Documents\Advanced Data Structures\Assessment 3\Finished Solutions\Malin-Multiform-Unsorted\Malin-Multiform\obj\Release\net8.0-windows\Malin-Multiform.sourcelink.json
+C:\Users\ash\Documents\Advanced Data Structures\Assessment 3\Finished Solutions\Malin-Multiform-Unsorted\Malin-Multiform\obj\Release\net8.0-windows\Malin-Multiform.dll
+C:\Users\ash\Documents\Advanced Data Structures\Assessment 3\Finished Solutions\Malin-Multiform-Unsorted\Malin-Multiform\obj\Release\net8.0-windows\refint\Malin-Multiform.dll
+C:\Users\ash\Documents\Advanced Data Structures\Assessment 3\Finished Solutions\Malin-Multiform-Unsorted\Malin-Multiform\obj\Release\net8.0-windows\Malin-Multiform.pdb
+C:\Users\ash\Documents\Advanced Data Structures\Assessment 3\Finished Solutions\Malin-Multiform-Unsorted\Malin-Multiform\obj\Release\net8.0-windows\Malin-Multiform.genruntimeconfig.cache
+C:\Users\ash\Documents\Advanced Data Structures\Assessment 3\Finished Solutions\Malin-Multiform-Unsorted\Malin-Multiform\obj\Release\net8.0-windows\ref\Malin-Multiform.dll

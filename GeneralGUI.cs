@@ -61,6 +61,14 @@ namespace Malin_Multiform
         private void ListboxAddAll()
         {
             ReadCSV();
+
+            // Faster, however less readable.
+/*            for (int i = 0; i > MasterFile.Count(); i++)
+            {
+                var item = MasterFile.ElementAt(i);
+                ListboxCSV.Items.Add($"{item.Value}, {item.Key}");
+            }*/
+
             foreach (var item in MasterFile)
             {
                 ListboxCSV.Items.Add($"{item.Value}, {item.Key}");
